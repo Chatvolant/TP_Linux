@@ -102,7 +102,8 @@ On a bien les Leds qui s’allument puis s’éteignent
 
 
 ## TP2 -  Modules kernel
-Utilité modules?
+Utilité des modules? -> servent à implémenter des pilotes (drivers) p.22 *cours 3 Linux*
+
 
 ## TP3 - Device tree
 qu'est-ce que c'est? à quoi ça sert?
