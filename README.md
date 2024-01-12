@@ -69,6 +69,23 @@ root c'est juste le nom du compte utilisateur (mais comme le nom ici c'est "root
 
 #### 1.4.3 Hello world !
 
+On a écrit dans le fichier helloworld un programme qui affiche un hello world mais finalement j’ai modifié le nom du fichier en hello (mv helloworld.c hello.c)   
+![image](https://github.com/Chatvolant/TP_Linux/assets/143954035/238016f3-c89b-41b2-b98b-d28248eec782)    
+
+On peut pas exécuter le hello.o dans la VM.
+
+Commande pour copier l'exécutable directement vers la SoC en ssh : 
+
+__scp chemin_sur_VM root@IP_DE_LA_CARTE_SOC:chemin_sur_SOC__
+
+![image](https://github.com/Chatvolant/TP_Linux/assets/143954035/57c3a731-5027-427d-b6ae-945b89b2c62a)
+
+![image](https://github.com/Chatvolant/TP_Linux/assets/143954035/5bf9d94a-1156-4453-9a27-a42931541998)
+
+On l’envoie vers la carte Soc.   
+On a bien les Leds qui s’allument puis s’éteignent  
+
+
 
 
 
