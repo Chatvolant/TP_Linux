@@ -65,6 +65,7 @@ Je pense que sur un pc classique on a pas les fichiers fpga
 ![image](https://github.com/Chatvolant/TP_Linux/assets/143954035/acc545be-1615-46f0-9afd-95c39b884bca)
 
 Iomem -> System RAM, I2c, SPI, ethernet, flash, gpio, dma, timer…    
+root c'est juste le nom du compte utilisateur (mais comme le nom ici c'est "root", ça veut dire qu'on est en mode superutilisateur)
 
 #### 1.4.3 Hello world !
 
