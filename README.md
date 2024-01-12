@@ -80,6 +80,9 @@ __scp chemin_sur_VM root@IP_DE_LA_CARTE_SOC:chemin_sur_SOC__
 
 ![image](https://github.com/Chatvolant/TP_Linux/assets/143954035/57c3a731-5027-427d-b6ae-945b89b2c62a)
 
+la commande echo "1"> nom_du_ficher permet d'écrire 1 dans le fichier   
+de base echo est utilisée pour afficher du texte (ici le texte c'est le caractère "1")   
+
 ![image](https://github.com/Chatvolant/TP_Linux/assets/143954035/5bf9d94a-1156-4453-9a27-a42931541998)
 
 On l’envoie vers la carte Soc.   
