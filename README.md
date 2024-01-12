@@ -31,8 +31,8 @@ Ensuite je connecte mon ordi au réseau D060 vu que la carte qu’on utilise est
 Je ping la carte avec mon PC
 ![image](https://github.com/Chatvolant/TP_Linux/assets/143954035/55d151d3-c1e5-4721-bc58-07bbcfcc3cee)
 
-Pas de paquets perdus, tous ceux qui ont été envoyés sont reçus dont la carte est bien connectée sur le réseau associé au wifi D060
-Pour se connecter avec le PC en ssh à la carte 
+Pas de paquets perdus, tous ceux qui ont été envoyés sont reçus dont la carte est bien connectée sur le réseau associé au wifi D060     
+Pour se connecter avec le PC en ssh à la carte    
 ![image](https://github.com/Chatvolant/TP_Linux/assets/143954035/0f57757c-e61b-4581-ad5b-9047dfe00aa2)
 
 Il fallait depuis le début se mettre sur la machine virtuelle au lieu du PC ;_ ;
