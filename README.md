@@ -104,9 +104,74 @@ On a bien les Leds qui s’allument puis s’éteignent
 
 
 
-## TP2 -  Modules kernel
-Utilité des modules? -> __servent à implémenter des pilotes (drivers) p.22 *cours 3 Linux* + à implémenter des services dont le code doit être exécuté avec des
-droits privilégiés__
+## TP2 -  Modules kernel (20/11/2023)
+Adresse IP du SoC aujourd'hui : 192.168.88.72
+
+### 2.1 Accès aux registres
+
+En mode utilisateur on peut certes écrire/lire dans les registres en passant par la fonction mmap (remappe l'adresse physique des drivers en adresse virtuelle) mais on aura pas la possibilité d’interagir avec les interruptions. Pas de moyen d'être interrompu donc pose problème quand on écrit sur un driver. Or, pour un système, le fait de pouvoir être interrompu est nécessaire à son bon fonctionnement (signaux d'erreurs, événements matériels) D'où l'utilisation des modules.  
+
+Utilité des modules? -> __servent à implémenter des pilotes (drivers) + à implémenter des services dont le code doit être exécuté avec des
+droits privilégiés (Sources : p.22 *cours 3 Linux*)__
+
+On a allumé la led la plus à gche. 
+Si on met 3 à la place de 1, la led à gauche de la led précédente s’allume aussi (deux LEDs allumées)
+![image](https://github.com/Chatvolant/TP_Linux/assets/143954035/9dc3b30d-b8f5-436f-a6a6-d5b09a14a447)  
+1<<6 Allume la led 6
+
+### 2.2 Compilation de module noyau sur la VM
+
+
+![image](https://github.com/Chatvolant/TP_Linux/assets/143954035/984a4a5c-c198-42a4-bbc1-8faa7f2e494a)  
+
+Dmesg permet de nous retourner le printk (printkernel)   
+
+![image](https://github.com/Chatvolant/TP_Linux/assets/143954035/6113d7e9-7945-4573-9a25-057e1b0c1072)   
+
+Décharger le module du noyau :  
+
+![image](https://github.com/Chatvolant/TP_Linux/assets/143954035/22d1ab4d-9b7d-417b-8e93-89a96df9d852)  
+
+Note: on est obligé de se mettre en mode pour pouvoir exécuter la commande qui permet de décharger le module qu'on a chargé du noyau  
+
+Fichier __.ko__ -> __kernel object__ (générés quand on a fait la commande make auparavant)
+__Make clean__ -> pour __supprimer les fichiers__ qu’on a __généré__ avec la commande __make__ (makefile)    
+
+![image](https://github.com/Chatvolant/TP_Linux/assets/143954035/0f402c1b-bd60-4cb4-baf5-62740d6ec36e)  
+
+Avec les paramètres : 
+
+![image](https://github.com/Chatvolant/TP_Linux/assets/143954035/28f9fe2a-d1eb-4a5b-b553-34edfa103006)   
+
+![image](https://github.com/Chatvolant/TP_Linux/assets/143954035/baffac13-38ab-4f71-a863-e830fab9034c)  
+
+__insmod__ charge dans le noyau le fichier __.ko__
+
+![image](https://github.com/Chatvolant/TP_Linux/assets/143954035/7d69e317-55d0-4393-8c17-ed5683a79eee)  
+
+![image](https://github.com/Chatvolant/TP_Linux/assets/143954035/d6eb8558-de6a-49c9-8ab5-822a0bf078f7)
+
+![image](https://github.com/Chatvolant/TP_Linux/assets/143954035/4a12d059-0b4e-4fbe-b6dd-e9f29564d3de)   
+
+
+![image](https://github.com/Chatvolant/TP_Linux/assets/143954035/ee32b881-dea0-4017-9c0b-fc195a438deb)
+
+__Timer__
+
+![image](https://github.com/Chatvolant/TP_Linux/assets/143954035/95d95470-3313-458d-bafc-3dd1d2576c2e)   
+
+### 2.3 CrossCompilation de modules noyau
+
+__Cross-compilation__ : permet de compiler des fichiers pour un autre type de système d'exploitation   
+Ici on cross compile dans la VM pour la SoC
+
+![image](https://github.com/Chatvolant/TP_Linux/assets/143954035/639a790d-879d-4ad0-89de-6885bf223f45)   
+
+#### 2.3.1 Préparation de la compilation
+#### 2.3.2 Récupéreation de la configuration actuelle du noyau
+#### 2.3.3 Hello World
+#### 2.3.4 Chenillard (Yes !)
+
 
 
 ## TP3 - Device tree
