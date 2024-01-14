@@ -218,6 +218,56 @@ On a bien réussi à modifier Pattern et speed :
 
 
 ## TP3 - Device tree
-qu'est-ce que c'est? à quoi ça sert?
+
+04/12/2023
+@ IP de la Soc : 192.168.88.102
+
+__Qu'est-ce que c'est?__ (cours 4, p.11)
+
+- Structure de données décrivant les périphériques d’une machine
+- Utilisé par le noyau (Linux ou autre)
+- Décrit le(s) CPU(s), la mémoire, les bus et les périphériques.
+
+__Objectif du TP__ :  
+- définir son propre périphérique
+- programmer un module qui identifie la présence du périphérique et se configure automatiquement en sa présence. Cet automatisme s’appuye sur le Device Tree.
+
+ On veut accéder à la partition de boot sur la carte VEEK (SoC)  
+ "Montage" de la partition : 
+
+ ![image](https://github.com/Chatvolant/TP_Linux/assets/143954035/2d76cc91-5a74-44ee-a4ab-1c06177c20cf)   
+
+ Device Tree après avoir fait correctement ce qui était demandé :  
+
+ ![image](https://github.com/Chatvolant/TP_Linux/assets/143954035/c473b567-a62f-4e6e-a686-080a44afd125)
+
+### 3.1 Module accedant au LED via /dev
+Sur cette partie il fallait récupérer le fichier gpio-leds.c sur moodle et le compiler. Pb : On a pas réussi à le compiler au début. On s'est ensuite rappelé qu'il fallait en fait cross-compiler.
+
+1. ![image](https://github.com/Chatvolant/TP_Linux/assets/143954035/7eb64e77-c2e0-412d-b853-6a7d13542694)
+2. Faire en sorte de placer dossier qu’on va compiler en dehors du dossier src (dossier partagé entre la VM et le PC)
+3. On fait make en utilisant ce makefile (on l’avait utilisé pour le chenillard, on fait bien attention à changer le nom pour ça colle avec celui du fichier .c qu’on va compiler)  
+![image](https://github.com/Chatvolant/TP_Linux/assets/143954035/1c19b14b-6d6f-4c86-91b8-ec53ef00c5f5)
+
+
+__Fonction read__ : pour lire l’état des LEDS
+__Fonction write__ : ecrire l’état des LEDs
+__Remove__ : pour retirer du système le périphérique géré par le driver
+__Probe__ : appelée quand le noyau (kernel) trouve un nouveau device que notre driver peut gérer (dans notre cas, elle doit être appelée seulement pour 1 instantiation du module Ensea LEDS)
+
+Rôle quand ces fonctions rentrent en action :  pour initialiser le misc et configurer le périphérique   
+
+@IP Soc : 192.168.88.121   
+
+Gpio-leds
+![image](https://github.com/Chatvolant/TP_Linux/assets/143954035/d52453c8-f749-406a-9eb6-67f290b633e7)
+
+
+### 3.2 Module final
+
+#### 3.2.1 Cahier des charges - Chenillard 
+
+![image](https://github.com/Chatvolant/TP_Linux/assets/143954035/4beba80c-fa89-4ead-8848-48887a52f988)
+6 et 9 ne sont pas pris en numero donc on choisit ces numeros pour le numero de majeur et de mineur (on va créer fichier driver dans dossier dev comme dans le TD 3
 
 # EN COURS D'AJOUT!!!!!!!!!!!!!!!!!!!!!!!!!!!
