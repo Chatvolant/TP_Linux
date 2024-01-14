@@ -51,7 +51,7 @@ __iomem__ : montre la carte mémoire actuelle du système pour chaque physical d
 
 ![image](https://github.com/Chatvolant/TP_Linux/assets/143954035/34bf9a7c-1242-4f1f-9b15-0497ca491c64)
 
-commande cat ioports donne rien bizarrement   
+commande __cat ioports__ donne rien bizarrement   
 Pour sortir de la cmd less on tape « q »   
 
 ![image](https://github.com/Chatvolant/TP_Linux/assets/143954035/55260616-22ed-4295-8bce-ea9ed3a0ef4a)
@@ -64,7 +64,7 @@ Je pense que sur un pc classique on a pas les fichiers fpga
 
 ![image](https://github.com/Chatvolant/TP_Linux/assets/143954035/acc545be-1615-46f0-9afd-95c39b884bca)
 
-Iomem -> System RAM, I2c, SPI, ethernet, flash, gpio, dma, timer…    
+__Iomem__ -> System RAM, I2c, SPI, ethernet, flash, gpio, dma, timer…    
 root c'est juste le nom du compte utilisateur (mais comme le nom ici c'est "root", ça veut dire qu'on est en mode superutilisateur)
 
 #### 1.4.3 Hello world !
@@ -87,22 +87,6 @@ de base echo est utilisée pour afficher du texte (ici le texte c'est le caract�
 
 On l’envoie vers la carte Soc.   
 On a bien les Leds qui s’allument puis s’éteignent  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 ## TP2 -  Modules kernel (20/11/2023)
 Adresse IP du SoC aujourd'hui : 192.168.88.72
