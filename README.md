@@ -265,9 +265,8 @@ Gpio-leds
 
 ### 3.2 Module final
 
-#### 3.2.1 Cahier des charges - Chenillard 
+#### 3.2.1 Cahier des charges - Chenillard (non réussi)
 
 ![image](https://github.com/Chatvolant/TP_Linux/assets/143954035/4beba80c-fa89-4ead-8848-48887a52f988)    
 6 et 9 ne sont pas pris en numero donc on choisit ces numeros pour le numero de majeur et de mineur (on va créer fichier driver dans dossier dev comme dans le TD 3   
 
-# EN COURS D'AJOUT!!!!!!!!!!!!!!!!!!!!!!!!!!!
