@@ -250,24 +250,24 @@ Sur cette partie il fallait récupérer le fichier gpio-leds.c sur moodle et le 
 ![image](https://github.com/Chatvolant/TP_Linux/assets/143954035/1c19b14b-6d6f-4c86-91b8-ec53ef00c5f5)
 
 
-__Fonction read__ : pour lire l’état des LEDS
-__Fonction write__ : ecrire l’état des LEDs
-__Remove__ : pour retirer du système le périphérique géré par le driver
-__Probe__ : appelée quand le noyau (kernel) trouve un nouveau device que notre driver peut gérer (dans notre cas, elle doit être appelée seulement pour 1 instantiation du module Ensea LEDS)
+__Fonction read__ : pour lire l’état des LEDS   
+__Fonction write__ : ecrire l’état des LEDs   
+__Remove__ : pour retirer du système le périphérique géré par le driver   
+__Probe__ : appelée quand le noyau (kernel) trouve un nouveau device que notre driver peut gérer (dans notre cas, elle doit être appelée seulement pour 1 instantiation du module Ensea LEDS)   
 
 Rôle quand ces fonctions rentrent en action :  pour initialiser le misc et configurer le périphérique   
 
 @IP Soc : 192.168.88.121   
 
-Gpio-leds
-![image](https://github.com/Chatvolant/TP_Linux/assets/143954035/d52453c8-f749-406a-9eb6-67f290b633e7)
+Gpio-leds   
+![image](https://github.com/Chatvolant/TP_Linux/assets/143954035/d52453c8-f749-406a-9eb6-67f290b633e7)   
 
 
 ### 3.2 Module final
 
 #### 3.2.1 Cahier des charges - Chenillard 
 
-![image](https://github.com/Chatvolant/TP_Linux/assets/143954035/4beba80c-fa89-4ead-8848-48887a52f988)
-6 et 9 ne sont pas pris en numero donc on choisit ces numeros pour le numero de majeur et de mineur (on va créer fichier driver dans dossier dev comme dans le TD 3
+![image](https://github.com/Chatvolant/TP_Linux/assets/143954035/4beba80c-fa89-4ead-8848-48887a52f988)    
+6 et 9 ne sont pas pris en numero donc on choisit ces numeros pour le numero de majeur et de mineur (on va créer fichier driver dans dossier dev comme dans le TD 3   
 
 # EN COURS D'AJOUT!!!!!!!!!!!!!!!!!!!!!!!!!!!
