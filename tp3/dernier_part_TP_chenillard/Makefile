@@ -1,4 +1,4 @@
-obj-m:=gpio-leds.o
+obj-m:=cheni_device.o
 KERNEL_SOURCE=~/linux-socfpga
 CFLAGS_MODULE:=-fno-pic
 all :

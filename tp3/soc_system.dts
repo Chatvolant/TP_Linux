@@ -249,8 +249,8 @@
 				gpio-controller;
 			}; //end gpio@0x100005000 (key)
 
-			ledr: ensea {
-				compatible = "dev,ensea";
+			ledr: gpio@0x100003000 {
+				compatible = "altr,pio-16.1", "altr,pio-1.0";
 				reg = <0x00000001 0x00003000 0x00000010>;
 				clocks = <&clk_50>;
 				altr,gpio-bank-width = <10>;	/* embeddedsw.dts.params.altr,gpio-bank-width type NUMBER */
