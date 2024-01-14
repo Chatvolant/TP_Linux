@@ -168,10 +168,53 @@ Ici on cross compile dans la VM pour la SoC
 ![image](https://github.com/Chatvolant/TP_Linux/assets/143954035/639a790d-879d-4ad0-89de-6885bf223f45)   
 
 #### 2.3.1 Préparation de la compilation
-#### 2.3.2 Récupéreation de la configuration actuelle du noyau
+
+![image](https://github.com/Chatvolant/TP_Linux/assets/143954035/1ce74d30-4afe-4c07-becf-2246837dcc13)  
+
+![image](https://github.com/Chatvolant/TP_Linux/assets/143954035/9cb8d5d3-ec8d-4243-b0fe-38a35ede4325)   
+
+#### 2.3.2 Récupération de la configuration actuelle du noyau
+
+![image](https://github.com/Chatvolant/TP_Linux/assets/143954035/59b64769-9f6d-48a7-8e2f-3d9b3ac3afff)   
+
+Quel est le rôle des lignes commençant par export ?   
+- __chemin_arm-linux-gnueabihf-__ correspond à notre compilateur. Le train (à la fin) permet de s’assurer que tt ajout de préfixe comme gcc se fera correctement avec ce chemin  
+- __export__ pour définir des variables d’environnement
+- __CROSS_COMPILE__ -> pour définir l’outil de compilation quand on va faire compilation croisée
+- __ARCH__ -> pour spécifier l’architecture cible lors de la compilation du noyau LINUX.
+
 #### 2.3.3 Hello World
+
+Séance 3 suite de 2.3.2 (27/11/2023)   
+@de la SOC pdt cette séance : 192.168.88.28   
+
+![image](https://github.com/Chatvolant/TP_Linux/assets/143954035/9a1aaa5b-982a-45d4-b05e-cee6d5f6b5fb)   
+![image](https://github.com/Chatvolant/TP_Linux/assets/143954035/14a80883-1847-4dcc-addb-bdcf63115925)   
+![image](https://github.com/Chatvolant/TP_Linux/assets/143954035/811b0646-4357-4c3f-87cc-d89b5711b771)   
+
+__Attention : Il faut compiler avec les sources de ARM pour Intel !!!!__
+
+![image](https://github.com/Chatvolant/TP_Linux/assets/143954035/bdfec787-0ea0-4ad3-84d8-2f8224149316)  
+
+Linux DE10-Standard 4.5.0-00198-g6b20a29   
+
+![image](https://github.com/Chatvolant/TP_Linux/assets/143954035/3d953516-649a-4ebf-aedf-972430d42538)   
+![image](https://github.com/Chatvolant/TP_Linux/assets/143954035/6bae346b-72f3-4e1e-9d67-dfaa64365faa)   
+
+Après avoir fait le make (qui a réussi), on transfert fichier vers la carte SoC (on a compilé avec ARM c’est pour ça qu’on utilise le kernel ds linux-socfpga dans notre fichier Makefile)
+
+![image](https://github.com/Chatvolant/TP_Linux/assets/143954035/44115a2e-8960-40a6-9580-a56e8cbf7a4c)   
+![image](https://github.com/Chatvolant/TP_Linux/assets/143954035/2beff51b-9bf8-4a70-a576-e8b17f58d8c4)  
+
 #### 2.3.4 Chenillard (Yes !)
 
+![image](https://github.com/Chatvolant/TP_Linux/assets/143954035/c2948f4b-5d4d-496d-980d-f203371833f4)   
+![image](https://github.com/Chatvolant/TP_Linux/assets/143954035/7d04ce1e-698d-4e34-96a9-c7da1d50c009)   
+
+Module chenille dans /proc (jsplus mais jcrois que c’est où on met les modules chargés en noyau)
+On a bien réussi à modifier Pattern et speed :   
+
+![image](https://github.com/Chatvolant/TP_Linux/assets/143954035/37c599c9-79fd-4a1e-ac93-3f654ba1f818)
 
 
 ## TP3 - Device tree
