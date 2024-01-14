@@ -11,7 +11,7 @@ Comme je n'ai pas Putty, j'ai utilisé TeraTerm.
 Configuration : baud rate __115200__  
 ![image](https://github.com/Chatvolant/TP_Linux/assets/143954035/bfb65803-e2da-4550-9039-b0736bede5bd)
 
-Taille occupée : 1.3G +9.8M+4K ≈ 1.31 G alors que notre carte SD a un volume de stockage de 16Go
+__Taille occupée__ : 1.3G +9.8M+4K ≈ 1.31 G alors que notre carte SD a un volume de stockage de 16Go
 On reboot le système et on exécute la commande ./resize2fs_once.
 
 ![image](https://github.com/Chatvolant/TP_Linux/assets/143954035/8dce3ac6-9a28-4c28-8984-a1b549585502)
@@ -24,7 +24,7 @@ On a plus d'espace disponible maintenant :
 
 ![image](https://github.com/Chatvolant/TP_Linux/assets/143954035/e57fc1e1-794d-4523-b833-983f0bd4b478)     
 
-Ifconfig après avoir modifié interfaces   
+ifconfig après avoir modifié interfaces   
 ![image](https://github.com/Chatvolant/TP_Linux/assets/143954035/2e1f974c-8d1b-455a-a929-88c6cb64295b)  
 L’@ IP a changé (le dernier nombre n’est plus le même)
 Ensuite je connecte mon ordi au réseau D060 vu que la carte qu’on utilise est connectée dessus (via cable ethernet).
