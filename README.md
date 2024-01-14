@@ -11,14 +11,14 @@ Comme je n'ai pas Putty, j'ai utilisé TeraTerm.
 Configuration : baud rate __115200__  
 ![image](https://github.com/Chatvolant/TP_Linux/assets/143954035/bfb65803-e2da-4550-9039-b0736bede5bd)
 
-__Taille occupée__ : 1.3G +9.8M+4K ≈ 1.31 G alors que notre carte SD a un volume de stockage de 16Go
+__Taille occupée__ : 1.3G +9.8M+4K ≈ __1.31 G__ alors que notre carte SD a un volume de stockage de 16Go
 On reboot le système et on exécute la commande ./resize2fs_once.
 
 ![image](https://github.com/Chatvolant/TP_Linux/assets/143954035/8dce3ac6-9a28-4c28-8984-a1b549585502)
 ![image](https://github.com/Chatvolant/TP_Linux/assets/143954035/56b98a4a-9ba2-409d-995c-08fb28adbde3)
  
 On a plus d'espace disponible maintenant : 
-12G+0.375G+0.376G+0,366+0,005+0,376+0,076= 13,574 G dispo au total
+12G+0.375G+0.376G+0,366+0,005+0,376+0,076= __13,574 G dispo__ au total (Gigabytes aka Gigaoctets)
 
 ### 1.3.3 Configuration réseau
 
@@ -81,7 +81,7 @@ __scp chemin_sur_VM root@IP_DE_LA_CARTE_SOC:chemin_sur_SOC__
 ![image](https://github.com/Chatvolant/TP_Linux/assets/143954035/57c3a731-5027-427d-b6ae-945b89b2c62a)
 
 la commande echo "1"> nom_du_ficher permet d'écrire 1 dans le fichier   
-de base echo est utilisée pour afficher du texte (ici le texte c'est le caractère "1")   
+de base __echo__ est utilisée pour afficher du texte (ici le texte c'est le caractère "1")   
 
 ![image](https://github.com/Chatvolant/TP_Linux/assets/143954035/5bf9d94a-1156-4453-9a27-a42931541998)
 
@@ -123,7 +123,7 @@ __Make clean__ -> pour __supprimer les fichiers__ qu’on a __généré__ avec l
 
 ![image](https://github.com/Chatvolant/TP_Linux/assets/143954035/0f402c1b-bd60-4cb4-baf5-62740d6ec36e)  
 
-Avec les paramètres : 
+__Avec les paramètres__ : 
 
 ![image](https://github.com/Chatvolant/TP_Linux/assets/143954035/28f9fe2a-d1eb-4a5b-b553-34edfa103006)   
 
@@ -208,13 +208,13 @@ On a bien réussi à modifier Pattern et speed :
 
 __Qu'est-ce que c'est?__ (cours 4, p.11)
 
-- Structure de données décrivant les périphériques d’une machine
+- __Structure de données__ décrivant les périphériques d’une machine
 - Utilisé par le noyau (Linux ou autre)
 - Décrit le(s) CPU(s), la mémoire, les bus et les périphériques.
 
 __Objectif du TP__ :  
 - définir son propre périphérique
-- programmer un module qui identifie la présence du périphérique et se configure automatiquement en sa présence. Cet automatisme s’appuye sur le Device Tree.
+- programmer un module qui identifie la présence du périphérique et se configure automatiquement en sa présence. Cet automatisme s’appuye sur le __Device Tree__.
 
  On veut accéder à la partition de boot sur la carte VEEK (SoC)  
  "Montage" de la partition : 
