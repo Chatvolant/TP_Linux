@@ -11,7 +11,7 @@ Comme je n'ai pas Putty, j'ai utilisé TeraTerm.
 Configuration : baud rate __115200__  
 ![image](https://github.com/Chatvolant/TP_Linux/assets/143954035/bfb65803-e2da-4550-9039-b0736bede5bd)
 
-__Taille occupée__ : 1.3G +9.8M+4K ≈ __1.31 G__ alors que notre carte SD a un volume de stockage de 16Go
+__Taille occupée__ : 1.3G +9.8M+4K ≈ __1.31 G__ mais on a peu d'espace disponible alors que notre carte SD a un volume de stockage de 16Go
 On reboot le système et on exécute la commande ./resize2fs_once.
 
 ![image](https://github.com/Chatvolant/TP_Linux/assets/143954035/8dce3ac6-9a28-4c28-8984-a1b549585502)
